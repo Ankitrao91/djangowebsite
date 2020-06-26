@@ -1,6 +1,7 @@
 env/*
 .idea/*
 .DS_Store
+media
 settings
 __pycache__/
 *.py[cod]
