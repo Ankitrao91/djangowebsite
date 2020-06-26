@@ -1,8 +1,8 @@
 env/*
 .idea/*
 .DS_Store
-media
-settings
+
+media/
 __pycache__/
 *.py[cod]
 
@@ -34,6 +34,3 @@ coverage.xml
 __pycache__
 
 
-
-# Sphinx documentation
-docs/_build/
