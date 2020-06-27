@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!$um2gsy-sp$5q9b^hi#*7lpjb^t&fl+y1paudy3q5d+0q--o='
+SECRET_KEY = 'xxxx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -53,10 +53,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myproject.urls'
 
-config = RawConfigParser()
-configFilePath = r'C:\Users\hp\Desktop\New folder (2)\myproject\settings.ini'
-config.read(configFilePath)
-GA_TRACKING_ID = config.get('section', 'ga_key')
+# config = RawConfigParser()
+# configFilePath = r'C:\Users\hp\Desktop\New folder (2)\myproject\settings.ini'
+# config.read(configFilePath)
+# GA_TRACKING_ID = config.get('section', 'ga_key')
+GA_TRACKING_ID ='UA-170157390-1'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -135,12 +136,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #added manually
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    #'/var/www/static/',
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     #'/var/www/static/',
+# ]
